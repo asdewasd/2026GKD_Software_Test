@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -Wl,--enable-auto-import CMakeFiles/app.dir/main.cpp.o CMakeFiles/app.dir/TaskManager.cpp.o CMakeFiles/app.dir/TaskDelay.cpp.o CMakeFiles/app.dir/TaskGain.cpp.o CMakeFiles/app.dir/TaskFilter.cpp.o CMakeFiles/app.dir/SensorTaskBase.cpp.o -o app.exe -Wl,--out-implib,libapp.dll.a -Wl,--major-image-version,0,--minor-image-version,0

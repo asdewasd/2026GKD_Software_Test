@@ -1,0 +1,3 @@
+/c/Users/13298/Cprogram/First_test/build/CMakeFiles/app.dir
+/c/Users/13298/Cprogram/First_test/build/CMakeFiles/edit_cache.dir
+/c/Users/13298/Cprogram/First_test/build/CMakeFiles/rebuild_cache.dir
