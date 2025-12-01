@@ -1,15 +1,16 @@
 #ifndef HEAD_H
 #define HEAD_H
 
-
+#include <vector>
 #include <iostream>
 #include <memory>
 #include <atomic>
+#include <algorithm>
 
 class SensorTaskBase{
     protected:
         int key;
-        int tp_in;
+        int tp_in;              
         int tp_out;
         std::atomic<bool> out;
     public:
@@ -61,5 +62,18 @@ class TaskDelay: public SensorTaskBase{
         void run()override;
         void stop()override;
         void callback(int msg)override; 
+};
+
+class TaskManager{
+    private:
+        std::vector<std::unique_ptr<SensorTaskBase>> tasks;
+    public:
+        void addTask(std::unique_ptr<SensorTaskBase> task);
+        void removeTask(int key);
+        void runAllTasks();
+        void stopAllTasks();
+        void callback(int key,int msg);
+        size_t getTaskCount() const;
+        bool hasTask(int key) const;
 };
 #endif
